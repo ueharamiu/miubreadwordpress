@@ -1,0 +1,13 @@
+// Break point
+@mixin breakpoint( $point ) {
+	@if $point == tablet {
+		@media ( max-width: 768px ) {
+			@content ;
+		}
+	}
+	@if $point == sp {
+		@media ( max-width: 320px ) {
+			@content ;
+		}
+	}
+}

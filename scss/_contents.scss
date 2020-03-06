@@ -1,0 +1,215 @@
+.wrapper {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  @include breakpoint( tablet ) {
+    max-width: 100%;
+    min-width: 261px;
+  }
+  @include breakpoint( sp ) {
+    display: block;
+  }
+}
+
+.h2 {
+  text-align: center;
+}
+
+.text1, .text2 {
+  @include breakpoint( tablet ) {
+    text-align: initial;
+    font-size: 80%;
+    padding: 4.5%;
+    box-sizing: border-box;
+  }
+}
+
+/* お知らせ */
+.post-info {
+  width: 1040px;
+  height: 110px;
+  padding: 10px 20px 30px;
+  margin-bottom: 10px;
+  position: relative;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: auto;
+    padding: 3% 3% 4%;
+    box-sizing: border-box;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 1080px;
+    height: 2px;
+    border-radius: 9px;
+    top: 154px;
+    left: 0;
+    @include breakpoint( tablet ) {
+      content: '';
+      width: 100%;
+      top: 101.9%;
+    }
+  }
+}
+
+.post-title {
+  text-align: center;
+  font-size: 20px;
+  margin: 10px 30px;
+  position: relative;
+  @include breakpoint( tablet ) {
+    font-size: 95%;
+    margin: auto;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: #b7ccb2;
+    width: 100px;
+    height: 3px;
+    border-radius: 9px;
+    top: 32px;
+    left: 45%;
+    display: inline-block;
+  @include breakpoint( tablet ) {
+    width: 15.154%;
+    top: 110%;
+    left: 42.5%;
+  }
+  @include breakpoint( sp ) {
+    width: 31%;
+    left: 34%;
+  }
+  }
+}
+
+/* こだわり、お店の特徴の親要素 */
+.f-container {
+  display: flex;
+  flex-wrap: wrap;
+  @include breakpoint( tablet ) {
+    flex-wrap: nowrap;
+  }
+  @include breakpoint( sp ) {
+    display: block;
+    flex-wrap: nowrap;
+  }
+}
+
+/* こだわり */
+.commitment {
+  width: 515px;
+  height: 160px;
+  padding: 10px 10px 30px;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 3% 3% 5%;
+    min-width: 130.5px;
+    max-width: 340.165px;
+  }
+  @include breakpoint( sp ) {
+    max-width: 320px;
+  }
+}
+
+.commitment-title {
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  @include breakpoint( tablet ) {
+    font-size: 95%;
+    margin: auto;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: #b7ccb2;
+    width: 100px;
+    height: 3px;
+    border-radius: 9px;
+    top: 32px;
+    left: 205px;
+    display: inline-block;
+    @include breakpoint( tablet ) {
+      width: 31%;
+      top: 110%;
+      left: 34%;
+    }
+  }
+}
+
+/* お店の特徴 */
+.item2 {
+  @include breakpoint( tablet ) {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: #d0d0d0;
+      width: 2px;
+      height: 100%;
+      border-radius: 9px;
+      top: auto;
+      @include breakpoint( sp ) {
+        width: 100%;
+        height: 2px;
+        top: -2.5%;
+      }
+    }
+  }
+}
+
+.point {
+  width: 515px;
+  height: 160px;
+  padding: 10px 10px 30px;
+  margin-left: 10px;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin-left: 0;
+    padding: 3% 3% 5%;
+    min-width: 130.5px;
+    max-width: 340.165px;
+  }
+  @include breakpoint( sp ) {
+    margin-top: 3%;
+    max-width: 320px;
+  }
+}
+
+.point-title {
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  @include breakpoint( tablet ) {
+    font-size: 95%;
+    margin: auto;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: #b7ccb2;
+    width: 140px;
+    height: 3px;
+    border-radius: 9px;
+    top: 32px;
+    left: 185px;
+    display: inline-block;
+    @include breakpoint( tablet ) {
+      width: 30%;
+      top: 110%;
+      left: 35%;
+    }
+  }
+}

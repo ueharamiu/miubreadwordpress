@@ -1,0 +1,1169 @@
+@charset "UTF-8";
+
+@import "./mixin";
+@import "./contents";
+@import "./menu";
+@import "./location";
+@import "./contact";
+@import "./common/header";
+@import "./common/footer";
+@import "./common/sidebar";
+@import "./page/toppage";
+
+
+/* 共通部分 */
+html {
+  font-size: 100%;
+  @include breakpoint( tablet ) {
+  }
+  @include breakpoint( sp ) {
+  }
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  color: #31251c;
+  @include breakpoint( tablet ) {
+    overflow-x: hidden;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @include breakpoint( sp ) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.text1, .text2 {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px 0px 10px;
+}
+
+figcaption {
+  font-size: 14px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ボタン */
+
+.button {
+  font-size: 0.75rem;
+  background-color: #b7ccb2;
+  color: #31251c;
+  border-radius: 5px;
+  padding: 2px 6px;
+
+  &:hover {
+    background-color: #A0B39B;
+    transition: all 0.5s ease;
+  }
+}
+
+// ハンバーガーメニューチェックボックス非表示
+#nav-input, #nav-open {
+  display: none;
+}
+
+/* HEADER
+-----------------------------*/
+#header {
+  width: 1280px;
+  height: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: 80%;
+  }
+  @include breakpoint( sp ) {
+    height: auto;
+  }
+
+  nav {
+    display: flex; /* ロゴとメニューを並列に */
+    justify-content: space-between; /* ロゴとナビをそれぞれ両端に */
+    height: 100px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: #d0d0d0;
+      width: 1280px;
+      height: 2px;
+      border-radius: 9px;
+      top: 100px;
+    }
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    margin: 10px 10px 10px 20px;
+    @include breakpoint( tablet ) {
+      width: 60px;
+      height: 60px;
+      margin: auto;
+    }
+    @include breakpoint( sp ) {
+      width: 60px;
+      height: 60px;
+      margin: auto;
+    }
+  }
+}
+
+  ul.main-nav {
+    display: flex;
+    align-items: center; /* ナビを中央に揃える */
+    list-style: none;
+    margin: 0; /* ブラウザ固有のmarginを消す←リセット系のcss入れれば大体消える */
+    height: 100px;
+    position: relative;
+    @include breakpoint( tablet ) {
+      display: block;
+      flex-flow: nowrap;
+      width: 400px;
+      max-width: 100%;
+      text-align: left;
+      position: fixed;
+      top: 5%;
+      right: 0;
+      z-index: 999;
+    }
+
+  li {
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: #b7ccb2;
+      width: 3px;
+      height: 60px;
+      border-radius: 9px;
+      top: 20px;
+    }
+
+    &:nth-child(1)::before {
+      content: none;
+    }
+  }
+  
+}
+
+.main-nav li a {
+  color: #31251c;
+  padding: 40px 40px 44px;
+
+  &:hover {
+    color: #d0d0d0;
+    transition: all 0.5s ease;
+    text-decoration: none;
+  }
+}
+
+
+
+/* CONTENTS
+----------------------------- */
+.wrapper {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  @include breakpoint( tablet ) {
+    max-width: 100%;
+    min-width: 261px;
+  }
+  @include breakpoint( sp ) {
+    display: block;
+  }
+}
+
+.h2 {
+  text-align: center;
+}
+
+.text1, .text2 {
+  @include breakpoint( tablet ) {
+    text-align: initial;
+    font-size: 80%;
+    padding: 4.5%;
+    box-sizing: border-box;
+  }
+}
+
+/* お知らせ */
+.post-info {
+  width: 1040px;
+  height: 110px;
+  padding: 10px 20px 30px;
+  margin-bottom: 10px;
+  position: relative;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: auto;
+    padding: 3% 3% 4%;
+    box-sizing: border-box;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 1080px;
+    height: 2px;
+    border-radius: 9px;
+    top: 154px;
+    left: 0;
+    @include breakpoint( tablet ) {
+      content: '';
+      width: 100%;
+      top: 101.9%;
+    }
+  }
+}
+
+.post-title {
+  text-align: center;
+  font-size: 20px;
+  margin: 10px 30px;
+  position: relative;
+  @include breakpoint( tablet ) {
+    font-size: 95%;
+    margin: auto;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: #b7ccb2;
+    width: 100px;
+    height: 3px;
+    border-radius: 9px;
+    top: 32px;
+    left: 45%;
+    display: inline-block;
+  @include breakpoint( tablet ) {
+    width: 15.154%;
+    top: 110%;
+    left: 42.5%;
+  }
+  @include breakpoint( sp ) {
+    width: 31%;
+    left: 34%;
+  }
+  }
+}
+
+/* こだわり、お店の特徴の親要素 */
+.f-container {
+  display: flex;
+  flex-wrap: wrap;
+  @include breakpoint( tablet ) {
+    flex-wrap: nowrap;
+  }
+  @include breakpoint( sp ) {
+    display: block;
+    flex-wrap: nowrap;
+  }
+}
+
+/* こだわり */
+.commitment {
+  width: 515px;
+  height: 160px;
+  padding: 10px 10px 30px;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 3% 3% 5%;
+    min-width: 130.5px;
+    max-width: 340.165px;
+  }
+  @include breakpoint( sp ) {
+    max-width: 320px;
+  }
+}
+
+.commitment-title {
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  @include breakpoint( tablet ) {
+    font-size: 95%;
+    margin: auto;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: #b7ccb2;
+    width: 100px;
+    height: 3px;
+    border-radius: 9px;
+    top: 32px;
+    left: 205px;
+    display: inline-block;
+    @include breakpoint( tablet ) {
+      width: 31%;
+      top: 110%;
+      left: 34%;
+    }
+  }
+}
+
+/* お店の特徴 */
+.item2 {
+  @include breakpoint( tablet ) {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: #d0d0d0;
+      width: 2px;
+      height: 100%;
+      border-radius: 9px;
+      top: auto;
+      @include breakpoint( sp ) {
+        width: 100%;
+        height: 2px;
+        top: -2.5%;
+      }
+    }
+  }
+}
+
+.point {
+  width: 515px;
+  height: 160px;
+  padding: 10px 10px 30px;
+  margin-left: 10px;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin-left: 0;
+    padding: 3% 3% 5%;
+    min-width: 130.5px;
+    max-width: 340.165px;
+  }
+  @include breakpoint( sp ) {
+    margin-top: 3%;
+    max-width: 320px;
+  }
+}
+
+.point-title {
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  @include breakpoint( tablet ) {
+    font-size: 95%;
+    margin: auto;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: #b7ccb2;
+    width: 140px;
+    height: 3px;
+    border-radius: 9px;
+    top: 32px;
+    left: 185px;
+    display: inline-block;
+    @include breakpoint( tablet ) {
+      width: 30%;
+      top: 110%;
+      left: 35%;
+    }
+  }
+}
+
+/* 商品メニュー(index.html) */
+.toppage-menu-wrapper-grid {
+  width: 1080px;
+  height: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #9B826C;
+  position: relative;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: auto;
+  }
+
+  &::before { /* 上に灰色の横線を配置 */
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 1080px;
+    height: 2px;
+    border-radius: 9px;
+    top: -6px;
+    left: 0;
+    @include breakpoint( tablet ) {
+      width: 100%;
+    }
+  }
+}
+
+.toppage-menu-box {
+  width: 80%;
+  margin: 0 auto;
+  @include breakpoint( tablet ) {
+    min-width: 261px;
+  }
+}
+
+.toppage-menu-title {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 26px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  @include breakpoint( tablet ) {
+    font-size: 95%;
+    margin-top: 4%;
+  }
+}
+
+.toppage-menu-images {
+  display: flex;
+  align-items: center; /* 画像を中央付近にまとめる */
+  @include breakpoint( tablet ) {
+    flex-wrap: wrap;
+    min-width: 249px;
+    max-width: 598px;
+  }
+
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* 画像を中央でトリミング */
+  } 
+} 
+
+figure {
+  @include breakpoint( tablet ) {
+    width: 40%;
+    height: 50%;
+    min-width: 100.0012px;
+    margin: 5%;
+    text-align: center;
+  }
+}
+
+figcaption {
+  @include breakpoint( tablet ) {
+    text-align: center;
+    font-size: 80%;
+  }
+}
+
+.toppage-menu-images figure img {
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: 100%;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover; /* 画像を中央でトリミング(タブレット) */
+  }
+}
+
+.toppage-menu-wrapper-grid::after { /* 下に灰色の横線を配置 */
+  content: '';
+  position: absolute;
+  background-color: #d0d0d0;
+  width: 1080px;
+  height: 2px;
+  border-radius: 9px;
+  top: 304px;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    top: 100.6%;
+  }
+  @include breakpoint( sp ) {
+    top: 101.3%;
+  }
+}
+
+
+/* 店舗情報・地図 */
+#location {
+  width: 1080px;
+  height: 200px;
+  margin-bottom: 10px;
+  background-color: #F1F0EA;
+  position: relative;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+}
+
+.location-wrapper {
+  display: flex;
+  justify-content: space-between;
+  @include breakpoint( tablet ) {
+    justify-content: unset;
+    flex-direction: column;
+  }
+}
+
+.location-box {
+  width: 480px;
+  height: 200px;
+  @include breakpoint( tablet ) {
+    min-width: 261px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+.location-info {
+  width: 300px;
+  margin: 28px 90px;
+  @include breakpoint( tablet ) {
+    margin: 0 auto;
+    width: 100px;
+    min-width: 250px;
+  } 
+}
+
+dt {
+  float: left;
+  width: 100px;
+  @include breakpoint( tablet ) {
+    font-size: 90%;
+  }
+}
+
+dd {
+  @include breakpoint( tablet ) {
+  font-size: 90%;
+  margin: 0;
+  }
+}
+
+.location-map {
+  width: 74%;
+  @include breakpoint( tablet ) {
+    width: 100%;
+  }
+}
+
+iframe {
+  width: 100%;
+}
+
+#location::after {
+  content: '';
+  position: absolute;
+  background-color: #d0d0d0;
+  width: 1080px;
+  height: 2px;
+  border-radius: 9px;
+  top: 204px;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    top: 101%;
+  }
+  @include breakpoint( sp ) {
+    top: 102%;
+  }
+}
+
+
+/* お問い合わせ */
+.contact-wrapper {
+  width: 1080px;
+  height: 300px;
+  margin-bottom: 10px;
+  position: relative;
+  @include breakpoint( tablet ) {
+    width: 100%;
+  }
+}
+
+.page-title {
+  font-size: 20px;
+  text-align: center;
+}
+
+form {
+  width: 60%;
+  margin: 0 auto;
+
+  div {
+    margin-bottom: 5.5px;
+  }
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+  &[type="text"], 
+  &[type="email"] {
+    border: 1px #31251c solid;
+    border-radius: 5px;
+    padding: 5px;
+  }
+}
+
+textarea {
+  border: 1px #31251c solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input {
+  &[type="text"], 
+  &[type="email"] {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+textarea {
+  width: 100%;
+  max-width: 600px;
+  height: 1.875rem;
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.contact-wrapper::after { /* 下に灰色の横線を配置 */
+  content: '';
+  position: absolute;
+  background-color: #d0d0d0;
+  width: 1080px;
+  height: 2px;
+  top: 304px;
+  @include breakpoint( tablet ) {
+    width: 100%;  
+  }
+}
+
+/* サイドバー */
+.side-wrapper {
+  width: 190px;
+  height: auto;
+  background-color: #b7ccb2;
+  margin-left: 10px;
+  @include breakpoint( tablet ) {
+    width: 30%;
+    height: auto;
+    background-color: #b7ccb2;
+    margin-left: 1%;
+  }
+  @include breakpoint( sp ) {
+    width: 100%;
+    margin-left: unset;
+  }
+}
+
+.side {
+  width: 190px;
+  background-color: #b7ccb2;
+  @include breakpoint( tablet ) {
+    width: 90%;
+    margin: 0 auto;
+    min-width: 57px;
+    max-width: 80px;
+  }
+  @include breakpoint( sp ) {
+    max-width: 300px;
+  }
+}
+
+.sub-title {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  @include breakpoint( tablet ) {
+    font-size: 80%;
+  }
+  @include breakpoint( sp ) {
+    display: none;
+  }
+}
+
+ul {
+  &.sub-menu {
+    align-items: center;
+    list-style: none;
+    margin-left: -5px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    @include breakpoint( tablet ) {
+      margin: 0;
+      padding: 0;
+    }
+    @include breakpoint( sp ) {
+      display: none;
+    }
+
+    li {
+      margin-bottom: 30px;
+      @include breakpoint( tablet ) {
+        text-align: left;
+        margin: 0 auto;
+        margin-bottom: 5%;
+      @include breakpoint( sp ) {
+        display: none;
+      }
+      }
+
+      a {
+        font-size: 16px;
+        color: #fff;
+        @include breakpoint( tablet ) {
+          font-size: 30%;
+        }
+      }
+    }
+  }
+
+  &.sns {
+    list-style: none;
+    display: flex; /* SNSアイコンを横並びに */
+    padding-left: 35px;
+    @include breakpoint( tablet ) {
+      padding: 0;
+    }
+    @include breakpoint( sp ) {
+      margin: 0 auto;
+      padding-top: 1%;
+    }
+    
+    li {
+      @include breakpoint( tablet ) {
+        display: inline-block;
+        width: 50%;
+        height: auto;
+      }
+      @include breakpoint( sp ) {
+        display: inline-block;
+        width: 50%;
+        height: auto;
+        text-align: center;
+      }
+    }
+    
+  }
+}
+
+.sns img {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  @include breakpoint( tablet ) {
+    width: 80%;
+    height: auto;
+    margin: 10%;
+  }
+  @include breakpoint( sp ) {
+    width: 30%;
+  }
+}
+
+/* フッター
+-----------------------------*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  background: #9B826C;
+  height: 160px;
+  width: 1280px;
+  @include breakpoint( tablet ) {
+    width: 100vw;
+    height: 100%;
+  }
+  @include breakpoint( sp ) {
+    width: 100%;
+    height: auto;
+    min-width: 260px;
+    max-width: 320px;
+  }
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: 50%;
+    padding-top: 10px;
+  }
+
+  a {
+    @include breakpoint( tablet ) {
+      margin: 1%; 
+    }
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    @include breakpoint( tablet ) {
+      min-width: 20px;
+      height: auto;
+      margin: 0;
+    }
+    @include breakpoint( sp ) {
+      min-width: 10px;
+      max-width: 30px;
+      margin: 0;
+    }
+  }
+
+  .box {
+    width: 1000px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 120px;
+    margin-left: 60px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    list-style: none;
+    @include breakpoint( tablet ) {
+      flex-wrap: wrap;
+      min-width: 295px;
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+    }
+    @include breakpoint( sp ) {
+      min-width: 180px;
+      max-width: 290px;
+      height: 80px;
+    }
+
+    li {
+      margin: 20px;
+      @include breakpoint( tablet ) {
+        width: 29%;
+        margin: 1%;
+        height: 20px;
+      }
+      @include breakpoint( sp ) {
+        width: 40%;
+      }
+
+      @include breakpoint( tablet ) {
+        &:nth-child(1) {
+          order: 1;
+        }
+    
+        &:nth-child(2) {
+          order: 4;
+        }
+    
+        &:nth-child(3) {
+          order: 2;
+        }
+    
+        &:nth-child(4) {
+          order: 5;
+        }
+    
+        &:nth-child(5) {
+          order: 3;
+        }
+    
+        &:nth-child(6) {
+          order: 6;
+        }
+        @include breakpoint( sp ) {
+          &:nth-child(1) {
+            order: 1;
+          }
+      
+          &:nth-child(2) {
+            order: 3;
+          }
+      
+          &:nth-child(3) {
+            order: 5;
+          }
+      
+          &:nth-child(4) {
+            order: 2;
+          }
+      
+          &:nth-child(5) {
+            order: 4;
+          }
+      
+          &:nth-child(6) {
+            order: 6;
+          }
+        }
+      }
+
+      a {
+        color: #fff;
+        font-size: 14px;
+        @include breakpoint( tablet ) {
+          font-size: 95%;
+        }
+      }
+    }
+  }
+}
+
+.container p {
+  color: #fff;
+  font-size: 0.875rem;
+  text-align: center;
+  bottom: 10px;
+  @include breakpoint( tablet ) {
+    margin-top: 8%;
+    margin-bottom: 5%;
+  }
+}
+
+/* モバイル版
+-----------------------------*/
+
+/* --------------- ↓タブレットメディアクエリ --------------- */
+
+
+/* HEADER(タブレット)
+-----------------------------*/
+
+/* for iPad */
+@media screen and (max-width: 768px) {
+
+  br {
+    display: none;
+  }
+
+  #header,
+  .footer {
+    widows: 100%;
+  }
+   
+  #header {
+    nav {
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: #d0d0d0;
+        width: 100%;
+        height: 2px;
+        border-radius: 9px;
+        top: 99%;
+        z-index: 98;
+      }
+    }
+
+  }
+
+  /* ハンバーガーメニューcss */
+  #nav-drawer {
+    position: relative;
+  }
+
+  /* チェックボックス等は非表示に */
+  .nav-unshown {
+    display: none;
+  }
+
+  /* アイコンのスペース */
+  #nav-open {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: -40%;
+    vertical-align: middle;
+    background: #B7CCB2;
+    position: relative;
+  }
+
+  /* ハンバーガーメニューをcssだけで表現 */
+  .ham_line {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    left: 5px;
+    background: #fff;
+    border-radius: 5px;
+  }
+
+  .ham_line1 {
+    top: 6px;
+    z-index: 101;
+  }
+
+  .ham_line2 {
+    top: 14px;
+    z-index: 101;
+  }
+
+  .ham_line3 {
+    top: 22px;
+    z-index: 101;
+  }
+
+  /* 閉じる用の薄黒カバー */
+  #nav-close {
+    display: none; /* 始めは隠しておく */
+    position: fixed;
+    z-index: 99;
+    top: 0; /* 全体に広がるように */
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: .3s ease-in-out;
+  }
+
+  /* 中身 */
+  #nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100; /* 最前面に */
+    width: 80%; /* 左側に隙間をつくる(閉じるカバーを表示) */
+    max-width: 400px; /* 最大幅 */
+    height: 100%;
+    background: #b7ccb2;
+    transition: .3s ease-in-out; /* 滑らかに表示 */
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); /* 右に隠しておく */
+  }
+
+  /* チェックしたときに表示する閉じるボタン。JavaScriptで指定 */
+  .ham_line2.active {
+    opacity: 0;
+    transition: all .4s;
+  }
+
+  .ham_line1.active {
+    transition: all .4s;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    top: 14px;
+  }
+
+  .ham_line3.active {
+    transition: all .4s;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    top: 14px;
+  }
+
+  /* 閉じるボタンを横棒に戻す指定 */
+  .ham_line2 {
+    transition: opacity .4s ease-in;
+  }
+
+  .ham_line1, .ham_line3 {
+    transition: all .4s;
+  }
+
+  /* チェックが入ったら表示させる */
+  #nav-input:checked ~ {
+    #nav-close {
+      display: block; /* カバーを表示させる */
+      opacity: .5;
+    }
+
+    #nav-content {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%); /* 中身を表示 */
+      box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  /* メニューを縦並びにする */
+  ul.main-nav li {
+      margin: 10%;
+      /* メニューの縦線を無効化 */
+      &::before {
+        position: static;
+      }
+      a {
+        color: #fff;
+      }
+    }
+  
+
+  /*------------ ↑ハンバーガーメニュー ---------------*/
+
+  /* CONTENTS(タブレット)
+  ----------------------------- */
+
+}
+
+/* --------------- ↑タブレットメディアクエリ --------------- */
+
+/* --------------- ↓スマートフォンメディアクエリ --------------- */
+
+/* for iPhone */
+@media (max-width: 320px) {
+
+  #header, .footer {
+    width: 100%;
+  }
+
+  /* ハンバーガーメニューcss */
+
+  #nav-drawer {
+    position: relative;
+  }
+
+  /* チェックボックス等は非表示に */
+
+  .nav-unshown {
+    display: none;
+  }
+
+  /* アイコンのスペース */
+
+  #nav-open {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: -40%;
+    vertical-align: middle;
+    background: #B7CCB2;
+    position: relative;
+  }
+
+  /*------------ ↑ハンバーガーメニュー ---------------*/
+
+}
+
+/* --------------- ↑スマートフォンメディアクエリ --------------- */

@@ -1,0 +1,239 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  color: #31251c;
+  @include breakpoint( tablet ) {
+    overflow-x: hidden;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @include breakpoint( sp ) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  @include breakpoint( tablet ) {
+    max-width: 100%;
+    min-width: 261px;
+  }
+  @include breakpoint( sp ) {
+    display: block;
+  }
+}
+
+.contents-menu {
+  width: 1080px;
+  @include breakpoint( tablet ) {
+    width: 199%;
+  }
+  @include breakpoint( sp ) {
+    width: 100%;
+  }
+}
+
+.menu-wrapper-grid {
+  width: 1060px;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+  .menu-box {
+    widows: 1060px;
+    height: auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    @include breakpoint( tablet ) {
+      width: 90%;
+      margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    }
+  }
+
+    .menu-title {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #31251c;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: #b7ccb2;
+        width: 150px;
+        height: 3px;
+        border-radius: 9px;
+        top: 32px;
+        left: 455px;
+        display: inline-block;
+        @include breakpoint( tablet ) {
+          width: 25%;
+          left: 37.5%;
+        }
+        @include breakpoint( sp ) {
+          width: 50%;
+          left: 25%;
+        }
+      }
+    }
+    
+    .menu-images {
+      display: block;
+    
+      img {
+        widows: 150px;
+        height: 150px;
+      }
+    }
+
+    .anpan,
+    .plain-bread {
+      width: 800px;
+      display: flex;
+      margin: 0 auto;
+      padding-top: 50px;
+      @include breakpoint( tablet ) {
+        display: block;
+        width: 80%;
+        height: auto;
+        margin-top: 10%;
+        padding-top: 10%;
+      }
+    }
+
+    .croissant,
+    .sweet-bread {
+      width: 800px;
+      display: flex;
+      flex-direction: row-reverse;
+      margin: 0 auto;
+      padding-top: 50px;
+      @include breakpoint( tablet ) {
+        display: block;
+        width: 80%;
+        height: auto;
+        margin-top: 10%;
+        padding-top: 10%;
+      }
+    }
+
+      .menu-commentary-box-right,
+      .menu-commentary-box-left,
+      .menu-commentary-box-left-sweet-bread {
+        width: 600px;
+        height: 200px;
+        text-align: start;
+        margin-bottom: 15px;
+        position: relative;
+        @include breakpoint( tablet ) {
+          width: 100%;
+          margin: 0 auto;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          background-color: #d0d0d0;
+          width: 1000px;
+          height: 2px;
+          border-radius: 9px;
+          @include breakpoint( tablet ) {
+            width: 100%;
+          }
+        }
+      }
+      .menu-commentary-box-left-sweet-bread { // 灰色下線を非表示
+        &::after {
+          content: none;
+        }
+      }
+
+      .menu-commentary-box-right {
+        &::after {
+          left: -250px;
+          @include breakpoint( tablet ) {
+            left: 0;
+            margin-top: 10%;
+          }
+        }
+      }
+      .menu-commentary-box-left {
+        &::after {
+          left: -150px;
+          @include breakpoint( tablet ) {
+            left: 0;
+            margin-top: 10%;
+          }
+        }
+      }
+      
+
+        .menu-commentary-right,
+        .menu-commentary-left {
+          display: flex;
+          flex-direction: column;
+          height: 150px;
+          margin-top: 40px;
+          @include breakpoint( tablet ) {
+            margin-top: initial;
+            margin-bottom: 15%;
+          }
+        }
+        .menu-commentary-right {
+          margin-left: 100px;
+          height: 150px;
+          margin-top: 40px;
+          @include breakpoint( tablet ) {
+            margin-left: initial;
+            margin-top: initial;
+            margin-bottom: 15%;
+          }
+        }
+
+        
+          .bread-name-anpan,
+          .bread-name-croissant,
+          .bread-name-plain-bread,
+          .bread-name-sweet-bread {
+            font-size: 1.5em;
+            width: 200px;
+            @include breakpoint( tablet ) {
+              margin: 0 auto;
+              margin-top: 5%;
+              margin-bottom: 5%;
+              text-align: center;
+            }
+          }
+
+            dd {
+              margin: 0;
+              @include breakpoint( tablet ) {
+                margin: 0 auto;
+                text-align: center;
+              }
+              @include breakpoint( sp ) {
+                text-align: start;
+              }
+            }
+              
+
+              
+
+              
+
+            
+        

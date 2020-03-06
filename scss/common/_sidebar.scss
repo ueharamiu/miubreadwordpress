@@ -1,0 +1,121 @@
+.side-wrapper {
+  width: 190px;
+  height: auto;
+  background-color: #b7ccb2;
+  margin-left: 10px;
+  @include breakpoint( tablet ) {
+    width: 30%;
+    height: auto;
+    background-color: #b7ccb2;
+    margin-left: 1%;
+  }
+  @include breakpoint( sp ) {
+    width: 100%;
+    margin-left: unset;
+  }
+}
+
+.side {
+  width: 190px;
+  background-color: #b7ccb2;
+  @include breakpoint( tablet ) {
+    width: 90%;
+    margin: 0 auto;
+    min-width: 57px;
+    max-width: 80px;
+  }
+  @include breakpoint( sp ) {
+    max-width: 300px;
+  }
+}
+
+.sub-title {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  @include breakpoint( tablet ) {
+    font-size: 80%;
+  }
+  @include breakpoint( sp ) {
+    display: none;
+  }
+}
+
+ul {
+  &.sub-menu {
+    align-items: center;
+    list-style: none;
+    margin-left: -5px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    @include breakpoint( tablet ) {
+      margin: 0;
+      padding: 0;
+    }
+    @include breakpoint( sp ) {
+      display: none;
+    }
+
+    li {
+      margin-bottom: 30px;
+      @include breakpoint( tablet ) {
+        text-align: left;
+        margin: 0 auto;
+        margin-bottom: 5%;
+      @include breakpoint( sp ) {
+        display: none;
+      }
+      }
+
+      a {
+        font-size: 16px;
+        color: #fff;
+        @include breakpoint( tablet ) {
+          font-size: 30%;
+        }
+      }
+    }
+  }
+
+  &.sns {
+    list-style: none;
+    display: flex; /* SNSアイコンを横並びに */
+    padding-left: 35px;
+    @include breakpoint( tablet ) {
+      padding: 0;
+    }
+    @include breakpoint( sp ) {
+      margin: 0 auto;
+      padding-top: 1%;
+    }
+    
+    li {
+      @include breakpoint( tablet ) {
+        display: inline-block;
+        width: 50%;
+        height: auto;
+      }
+      @include breakpoint( sp ) {
+        display: inline-block;
+        width: 50%;
+        height: auto;
+        text-align: center;
+      }
+    }
+    
+  }
+}
+
+.sns img {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  @include breakpoint( tablet ) {
+    width: 80%;
+    height: auto;
+    margin: 10%;
+  }
+  @include breakpoint( sp ) {
+    width: 30%;
+  }
+}

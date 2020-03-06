@@ -1,0 +1,281 @@
+.wrapper {
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .h2 {
+    text-align: center;
+  }
+  
+  
+  /* お知らせ */
+  .post-info {
+    width: 1040px;
+    height: 110px;
+    padding: 10px 20px 30px;
+    margin-bottom: 10px;
+    position: relative;
+    /* background-color: #F57553; */
+  }
+  
+  .post-info::before {
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 1080px;
+    height: 2px;
+    border-radius: 9px;
+    top: 154px;
+    left: 0;
+  }
+  
+  .post-title {
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 30px;
+    position: relative;
+  }
+  
+  .post-title::after {
+    content: '';
+    position: absolute;
+    background-color: #b7ccb2;
+    width: 100px;
+    height: 3px;
+    border-radius: 9px;
+    top: 32px;
+    left: 45%;
+    display: inline-block;
+  }
+  
+  
+  /* こだわり、お店の特徴の親要素 */
+  .f-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  
+  /* こだわり */
+  .commitment {
+    width: 515px;
+    height: 160px;
+    padding: 10px 10px 30px;
+    /* background-color: #F5A053; */
+  }
+  
+  .commitment-title {
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .commitment-title::after {
+    content: '';
+    position: absolute;
+    background-color: #b7ccb2;
+    width: 100px;
+    height: 3px;
+    border-radius: 9px;
+    top: 32px;
+    left: 205px;
+    display: inline-block;
+  }
+  
+  
+  /* お店の特徴 */
+  .point {
+    width: 515px;
+    height: 160px;
+    padding: 10px 10px 30px;
+    margin-left: 10px;
+    /* background-color: #F5C553; */
+  }
+  
+  .point-title {
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .point-title::after {
+    content: '';
+    position: absolute;
+    background-color: #b7ccb2;
+    width: 140px;
+    height: 3px;
+    border-radius: 9px;
+    top: 32px;
+    left: 185px;
+    display: inline-block;
+  }
+  
+  
+  /* 商品メニュー(index.html) */
+  .toppage-menu-wrapper-grid {
+    width: 1080px;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #9B826C;
+    position: relative;
+  }
+  
+  .toppage-menu-wrapper-grid::before { /* 上に灰色の横線を配置 */
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 1080px;
+    height: 2px;
+    border-radius: 9px;
+    top: -6px;
+    left: 0;
+  }
+  
+  .toppage-menu-box {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .toppage-menu-title {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 26px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  .toppage-menu-images {
+    display: flex;
+    align-items: center; /* 画像を中央付近にまとめる */
+  }
+  
+  .toppage-menu-images img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* 画像を中央でトリミング */
+  }
+  
+  .toppage-menu-wrapper-grid::after { /* 下に灰色の横線を配置 */
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 1080px;
+    height: 2px;
+    border-radius: 9px;
+    top: 304px;
+  }
+  
+  
+  /* 店舗情報・地図 */
+  #location {
+    width: 1080px;
+    height: 200px;
+    margin-bottom: 10px;
+    background-color: #F1F0EA;
+    position: relative;
+  }
+  
+  .location-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .location-box {
+    width: 480px;
+    height: 200px;
+  }
+  
+  .location-info {
+    width: 300px;
+    margin: 28px 90px;
+  }
+  
+  dt {
+    float: left;
+    width: 100px;
+  }
+  
+  .location-map {
+    width: 74%;
+  }
+  
+  iframe {
+    width: 100%;
+  }
+  
+  #location::after {
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 1080px;
+    height: 2px;
+    border-radius: 9px;
+    top: 204px;
+  }
+  
+  
+  /* お問い合わせ */
+  .contact-wrapper {
+    width: 1080px;
+    height: 300px;
+    margin-bottom: 10px;
+    /* background-color: #0091aa; */
+    position: relative;
+  }
+  
+  .page-title {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  form {
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  form div {
+    margin-bottom: 5.5px;
+  }
+  
+  label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    border: 1px #31251c solid;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 1.875rem;
+  }
+  
+  input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+  }
+  
+  .contact-wrapper::after { /* 下に灰色の横線を配置 */
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 1080px;
+    height: 2px;
+    top: 304px;
+  }

@@ -1,0 +1,85 @@
+#location {
+  width: 1080px;
+  height: 200px;
+  margin-bottom: 10px;
+  background-color: #F1F0EA;
+  position: relative;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+}
+
+.location-wrapper {
+  display: flex;
+  justify-content: space-between;
+  @include breakpoint( tablet ) {
+    justify-content: unset;
+    flex-direction: column;
+  }
+}
+
+.location-box {
+  width: 480px;
+  height: 200px;
+  @include breakpoint( tablet ) {
+    min-width: 261px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+.location-info {
+  width: 300px;
+  margin: 28px 90px;
+  @include breakpoint( tablet ) {
+    margin: 0 auto;
+    width: 100px;
+    min-width: 250px;
+  } 
+}
+
+dt {
+  float: left;
+  width: 100px;
+  @include breakpoint( tablet ) {
+    font-size: 90%;
+  }
+}
+
+dd {
+  @include breakpoint( tablet ) {
+  font-size: 90%;
+  margin: 0;
+  }
+}
+
+.location-map {
+  width: 74%;
+  @include breakpoint( tablet ) {
+    width: 100%;
+  }
+}
+
+iframe {
+  width: 100%;
+}
+
+#location::after {
+  content: '';
+  position: absolute;
+  background-color: #d0d0d0;
+  width: 1080px;
+  height: 2px;
+  border-radius: 9px;
+  top: 204px;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    top: 101%;
+  }
+  @include breakpoint( sp ) {
+    top: 102%;
+  }
+}

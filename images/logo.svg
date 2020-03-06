@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b7ccb2;
+      }
+
+      .cls-2 {
+        font-size: 50px;
+        fill: #030303;
+        font-family: "Kozuka Gothic Pr6N";
+      }
+    </style>
+  </defs>
+  <rect id="長方形_1" data-name="長方形 1" class="cls-1" width="200" height="200"/>
+  <text id="ロゴ" class="cls-2" x="46.446" y="121.89">ロゴ</text>
+</svg>
