@@ -13,7 +13,7 @@
     <title>Miu Bread</title>
 
 <?php
-  require('common/header.php');
+  get_header();
 ?>
   </head>
 
@@ -157,7 +157,7 @@
       </div> <!-- #wrapper -->
 
 <?php
-  require('common/footer.php');
+  get_footer();
 ?>
 
     </body>

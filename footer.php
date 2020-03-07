@@ -14,3 +14,8 @@
           <p><small>&copy; miu uehara. all rights reserved.</small></p>
         </div> <!-- .container -->
       </footer>
+<?php
+wp_footer();
+?>
+</body>
+</html>
