@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="<?php language_attributes(); ?>">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="2019年オープン。Instagramで話題の癒やしを提供するパン屋さん">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="#">
+    <link rel="stylesheet" href="#">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Miu Bread</title>
+
     <!-- jQuery -->
     <script src="https:ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!-- 先に jQuery を読み込む -->
     <script type="text/javascript">
@@ -15,7 +29,7 @@
       });
     });
     </script>
-  
+
 
     <body>
       <div id="header">
@@ -42,3 +56,4 @@
             </div> <!-- #nav-drawer -->
         </nav>
       </div> <!-- header -->
+</head>
