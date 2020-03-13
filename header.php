@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="<?php language_attributes(); ?>">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="<?php bloginfo('description'); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="#">
+    <link rel="stylesheet" href="#">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <a href="<?php echo esc_url(home_url('/')); ?>">
+    <title><?php bloginfo('name'); ?></title>
+
     <!-- jQuery -->
     <script src="https:ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!-- 先に jQuery を読み込む -->
     <script type="text/javascript">
@@ -15,9 +30,9 @@
       });
     });
     </script>
-  
 
-    <body>
+
+    <body <?php body_class(); ?>>
       <div id="header">
         <nav>
           <h1 class="logo"><a href="index.html"><img src="images/logo.svg" alt="Miu Bread ロゴ"></a></h1>
@@ -42,3 +57,4 @@
             </div> <!-- #nav-drawer -->
         </nav>
       </div> <!-- header -->
+</head>
