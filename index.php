@@ -1,7 +1,5 @@
 
-<?php
-  get_header();
-?>
+<?php get_header(); ?>
 
 
       <div class="wrapper">
@@ -137,12 +135,8 @@
           </div> <!-- .contact-wrapper -->
         </div> <!-- .contents-->
 
-<?php
-  get_sidebar();
-?>
+<?php get_sidebar(); ?>
 
       </div> <!-- #wrapper -->
 
-<?php
-  get_footer();
-?>
+<?php get_footer(); ?>

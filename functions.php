@@ -3,6 +3,7 @@
 add_theme_support('menus');
 
 
+
 function miubread_widgets_init() {
   register_sidebar (
     array(
