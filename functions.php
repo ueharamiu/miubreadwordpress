@@ -2,6 +2,11 @@
 // テーマサポート
 add_theme_support('menus');
 
+// メニューバー表示
+register_nav_menus(
+    array(
+      'place_global' => 'グローバル')
+);
 
 function miubread_widgets_init() {
   register_sidebar (
