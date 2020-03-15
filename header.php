@@ -24,12 +24,11 @@
                 <span class="ham_line ham_line3"></span>
               </label>
               <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-<?php wp_nav_menu(); ?>
+<?php wp_nav_menu( $location, $description ); ?>
             </div> <!-- #nav-drawer -->
         </nav>
       </div> <!-- header -->
-<?php
-wp_head(); ?>
+
 
 <!-- jQuery -->
 <script src="https:ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!-- 先に jQuery を読み込む -->
@@ -49,4 +48,5 @@ $(function() {
 });
 </script>
 
+<?php wp_head(); ?>
 </head>
