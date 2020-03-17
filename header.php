@@ -7,12 +7,11 @@
 
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link type="css/style.css" rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
-    <a href="<?php echo esc_url(home_url('/')); ?>">
+    <link href="<?php echo esc_url(home_url('/')); ?>">
     <title><?php bloginfo('name'); ?></title>
 
 
-    <body <?php body_class(); ?>>
+    
       <div id="header">
         <nav>
           <h1 class="logo"><a href="<?php echo esc_url(home_url('/')); ?>"><img src="images/logo.svg" alt="Miu Bread ロゴ"></a></h1>

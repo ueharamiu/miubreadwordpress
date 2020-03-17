@@ -2,7 +2,10 @@
 // テーマサポート
 add_theme_support('menus');
 
-
+function miubread_script() {
+  wp_enqueue_style('miubread', get_template_directory_uri() . '/style.css');
+}
+add_action('wp_enqueue_scripts', 'miubread_script');
 
 function miubread_widgets_init() {
   register_sidebar (

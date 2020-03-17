@@ -1,7 +1,7 @@
 
 <?php get_header(); ?>
 
-
+<body <?php body_class(); ?>>
       <div class="wrapper">
         <div class="contents">
           <article>
