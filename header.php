@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
     <link type="css/style.css" rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <a href="<?php echo esc_url(home_url('/')); ?>">
     <title><?php bloginfo('name'); ?></title>
@@ -24,7 +24,7 @@
                 <span class="ham_line ham_line3"></span>
               </label>
               <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-<?php wp_nav_menu( $location, $description ); ?>
+<?php wp_nav_menu(); ?>
             </div> <!-- #nav-drawer -->
         </nav>
       </div> <!-- header -->
@@ -48,5 +48,8 @@ $(function() {
 });
 </script>
 
-<?php wp_head(); ?>
+<?php
+    wp_enqueue_script('jquery');
+    wp_head();
+?>
 </head>
