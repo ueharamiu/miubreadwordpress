@@ -5,13 +5,16 @@
     <meta name="description" content="<?php bloginfo('description'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- jQuery -->
+    <script src="js/miubread.js"></script>
+
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link href="<?php echo esc_url(home_url('/')); ?>">
     <title><?php bloginfo('name'); ?></title>
 
+<?php wp_head(); ?>
+</head>
 
-    
       <div id="header">
         <nav>
           <h1 class="logo"><a href="<?php echo esc_url(home_url('/')); ?>"><img src="images/logo.svg" alt="Miu Bread ロゴ"></a></h1>
@@ -36,24 +39,3 @@
             </div> <!-- #nav-drawer -->
         </nav>
       </div> <!-- header -->
-<?php wp_head(); ?>
-
-<!-- jQuery -->
-<script src="https:ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!-- 先に jQuery を読み込む -->
-<script type="text/javascript">
-$(function() {
-  $('#nav-input').click(function() {
-    $(this).toggleClass('active');
-
-    if($(this).hasClass('active')) {
-      $('.ham_line').addClass('active');
-      $('body').addClass('overflowHidden');
-    } else {
-      $('.ham_line').removeClass('active');
-      $('body').removeClass('overflowHidden');
-    }
-  });
-});
-</script>
-
-</head>
