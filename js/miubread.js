@@ -1,4 +1,4 @@
-$(function() {
+window.onload = function() {
   $('#nav-input').click(function() {
     $(this).toggleClass('active');
 
@@ -10,4 +10,4 @@ $(function() {
       $('body').removeClass('overflowHidden');
     }
   });
-});
+};
