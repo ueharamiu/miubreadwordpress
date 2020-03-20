@@ -6,8 +6,8 @@ function miubread_script() {
   // WordPress提供のjquery.jsを読み込まない
   wp_deregister_script('jquery');
   // jQuery読み込み
-  wp_enqueue_script( 'jquery', 'get_template_directory_uri()'  . '/js/miubread.js', array(), '1.0.0', true );
-  wp_enqueue_style('miubread', get_stylesheet_uri() );
+  wp_enqueue_script('jquery', get_template_directory_uri()  . '/js/miubread.js', array(), '1.0.0');
+  wp_enqueue_style('miubread', get_template_directory_uri() . '/style.css', array(), '1.0.0');
 }
 add_action('wp_enqueue_scripts', 'miubread_script');
 
