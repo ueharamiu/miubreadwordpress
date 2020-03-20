@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- jQuery -->
-    <script src="js/miubread.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/miubread.js"></script>
 
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
