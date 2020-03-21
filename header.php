@@ -5,6 +5,9 @@
     <meta name="description" content="<?php bloginfo('description'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+
+
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link type="css/style.css" rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
