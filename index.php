@@ -1,9 +1,7 @@
 
-<?php
-  get_header();
-?>
+<?php get_header(); ?>
 
-
+<body <?php body_class(); ?>>
       <div class="wrapper">
         <div class="contents">
           <article>
@@ -137,12 +135,8 @@
           </div> <!-- .contact-wrapper -->
         </div> <!-- .contents-->
 
-<?php
-  get_sidebar();
-?>
+<?php get_sidebar(); ?>
 
       </div> <!-- #wrapper -->
 
-<?php
-  get_footer();
-?>
+<?php get_footer(); ?>
