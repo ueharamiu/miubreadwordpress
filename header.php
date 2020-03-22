@@ -12,7 +12,6 @@
 
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <a href="<?php echo esc_url(home_url('/')); ?>">
     <title><?php bloginfo('name'); ?></title>
 
 <?php wp_head(); ?>
@@ -29,7 +28,15 @@
                 <span class="ham_line ham_line3"></span>
               </label>
               <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-<?php wp_nav_menu( $location, $description ); ?>
+              <div id="nav-content">
+                <ul class="main-nav">
+                  <li><a href="#">こだわり</a></li>
+                  <li><a href="#">お店の特徴</a></li>
+                  <li><a href="#">商品メニュー</a></li>
+                  <li><a href="#">お知らせ</a></li>
+                  <li><a href="#">店舗情報</a></li>
+                  <li><a href="#">お問い合わせ</a></li>
+                </ul>
             </div> <!-- #nav-drawer -->
         </nav>
       </div> <!-- header -->
