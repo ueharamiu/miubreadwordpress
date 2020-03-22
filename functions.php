@@ -2,12 +2,6 @@
 // テーマサポート
 add_theme_support('menus');
 
-// メニューバー表示
-register_nav_menus(
-    array(
-      'place_global' => 'グローバル')
-);
-
 function miubread_script() {
   // WordPress提供のjquery.jsを読み込まない
   wp_deregister_script('jquery');
