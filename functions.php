@@ -1,3 +1,4 @@
+<!-- プルリクエストテスト -->
 <?php
 // テーマサポート
 add_theme_support('menus');
