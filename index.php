@@ -1,9 +1,7 @@
 
-<?php
-  get_header();
-?>
+<?php get_header(); ?>
 
-
+<body <?php body_class(); ?>>
       <div class="wrapper">
         <div class="contents">
           <article>
@@ -54,22 +52,22 @@
                 <h2 class="toppage-menu-title">商品メニュー</h2>
                 <div class="toppage-menu-images">
                   <figure>
-                    <img src="images/menu1.jpg" alt="あんぱん">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/menu1.jpg" alt="あんぱん">
                     <figcaption>あんぱん</figcaption>
                   </figure>
 
                   <figure>
-                    <img src="images/menu2.jpg" alt="クロワッサン">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/menu2.jpg" alt="クロワッサン">
                     <figcaption>クロワッサン</figcaption>
                   </figure>
 
                   <figure>
-                    <img src="images/menu3.jpg" alt="食パン">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/menu3.jpg" alt="食パン">
                     <figcaption>食パン</figcaption>
                   </figure>
 
                   <figure>
-                    <img src="images/menu4.jpg" alt="菓子パン">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/menu4.jpg" alt="菓子パン">
                     <figcaption>菓子パン</figcaption>
                   </figure>
                 </div> <!-- .toppage-menu-images -->
@@ -137,12 +135,8 @@
           </div> <!-- .contact-wrapper -->
         </div> <!-- .contents-->
 
-<?php
-  get_sidebar();
-?>
+<?php get_sidebar(); ?>
 
       </div> <!-- #wrapper -->
 
-<?php
-  get_footer();
-?>
+<?php get_footer(); ?>

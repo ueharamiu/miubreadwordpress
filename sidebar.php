@@ -11,9 +11,9 @@
             </nav>
             <nav>
               <ul class="sns">
-                <li class="facebook"><img src="images/facebook.jpg" alt="facebook"></li>
-                <li class="twitter"><img src="images/twitter.jpg" alt="twitter"></li>
-                <li class="instagram"><img src="images/instagram.jpg" alt="instagram"></li>
+                <li class="facebook"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook.jpg" alt="facebook"></li>
+                <li class="twitter"><img src="<?php echo get_template_directory_uri(); ?>/images/twitter.jpg" alt="twitter"></li>
+                <li class="instagram"><img src="<?php echo get_template_directory_uri(); ?>/images/instagram.jpg" alt="instagram"></li>
               </ul>
             </nav>
           </div> <!-- .side -->
