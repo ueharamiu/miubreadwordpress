@@ -19,7 +19,7 @@
 
       <div id="header">
         <nav>
-          <h1 class="logo"><a href="<?php echo esc_url(home_url('/')); ?>"><img src="images/logo.svg" alt="Miu Bread ロゴ"></a></h1>
+          <h1 class="logo"><a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Miu Bread ロゴ"></a></h1>
             <div id="nav-drawer">
               <input id="nav-input" type="checkbox" class="nav-unshown">
               <label id="nav-open" for="nav-input">
