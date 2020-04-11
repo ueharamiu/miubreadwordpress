@@ -1,7 +1,7 @@
 <footer>
         <div class="container">
           <div class="inner">
-            <a href="logo-link"><img class="logo" src="images/logo.svg" alt="Miu Bread ロゴ"></a>
+            <a href="logo-link"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Miu Bread ロゴ"></a>
             <ul class="box">
               <li><a href="#">こだわり</a></li>
               <li><a href="#">お店の特徴</a></li>
