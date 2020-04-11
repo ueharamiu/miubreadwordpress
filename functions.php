@@ -4,17 +4,12 @@
 add_theme_support('menus');
 
 function miubread_script() {
-<<<<<<< HEAD
-  wp_enqueue_style('miubread', get_template_directory_uri() . '/style.css');
-  wp_enqueue_style('Noto+Sans+JP', '//fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap', array());
-=======
   // WordPress提供のjquery.jsを読み込まない
   wp_deregister_script('jquery');
   // jQuery読み込み
   wp_enqueue_script('jquery-min', "https://code.jquery.com/jquery-3.4.1.min.js", array());
   wp_enqueue_script('jquery', get_template_directory_uri()  . '/js/miubread.js', array());
   wp_enqueue_style('miubread', get_template_directory_uri() . '/style.css', array());
->>>>>>> f1fa3620972d97316afa9f0e1ef189aea60edefb
 }
 add_action('wp_enqueue_scripts', 'miubread_script');
 
