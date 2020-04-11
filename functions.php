@@ -10,6 +10,7 @@ function miubread_script() {
   wp_enqueue_script('jquery-min', "https://code.jquery.com/jquery-3.4.1.min.js", array());
   wp_enqueue_script('jquery', get_template_directory_uri()  . '/js/miubread.js', array());
   wp_enqueue_style('miubread', get_template_directory_uri() . '/style.css', array());
+  wp_enqueue_style('Noto+Sans+JP','//fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap',array());
 }
 add_action('wp_enqueue_scripts', 'miubread_script');
 

@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html lang="<?php language_attributes(); ?>">
   <head>
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="description" content="<?php bloginfo('description'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
-    <!-- jQuery -->
-    <script src="<?php echo get_template_directory_uri(); ?>/js/miubread.js"></script>
-
-    <!-- CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <title><?php bloginfo('name'); ?></title>
 
 <?php wp_head(); ?>
