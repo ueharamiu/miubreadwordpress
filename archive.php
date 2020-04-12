@@ -15,15 +15,16 @@
 
 <?php
   require('./common/header.php');
-?>  
+?>
 
   </head>
 
-  
+
       <div class="wrapper">
         <div class="contents-menu">
           <article>
             <div class="menu-wrapper-grid">
+              <!-- section をコメントアウト
               <section class="menu-box">
                 <h2 class="menu-title">商品メニュー</h2>
                 <article class="menu-images">
@@ -78,7 +79,9 @@
                         </dl>
                       </figcaption>
                   </figure>
+
                 </article> <!-- .menu-images -->
+                <!--
               </section> <!-- .menu-box -->
             </div> <!-- menu-wrapper-grid -->
           </article>
